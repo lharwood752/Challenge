@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Room dimensions")]
+[assembly: AssemblyTitle("Borwell Challenge")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Room dimensions")]
+[assembly: AssemblyProduct("Borwell Challenge")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a86f1e35-4474-47a8-ab71-7e030c327170")]
+[assembly: Guid("2979978a-8ffd-4d4e-beb0-7e1e3ea611e2")]
 
 // Version information for an assembly consists of the following four values:
 //

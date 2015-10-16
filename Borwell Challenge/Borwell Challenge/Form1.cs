@@ -5,10 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Room_dimensions
+namespace Borwell_Challenge
 {
     public partial class Form1 : Form
     {
@@ -24,7 +23,7 @@ namespace Room_dimensions
         static decimal Room_Length;
         static decimal Room_Height;
         static decimal FloorArea;
-        static decimal WallAreas;
+        static decimal WallAreas; 
         static decimal RoomVolume;
         static decimal Paint_Required;
         static decimal Paint_Coveravge = 12;
@@ -43,7 +42,7 @@ namespace Room_dimensions
             WallAreas = ((Room_Width * 2) + (Room_Length * 2)) * Room_Height;
 
             //Uses Width and length as room may not be a cube.
-
+                        
             Paint_Required = WallAreas / Paint_Coveravge;
 
             RoomVolume = Room_Width * Room_Length * Room_Height;
@@ -58,10 +57,10 @@ namespace Room_dimensions
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
-        {
+        {                            
 
-            try
-            {
+           try
+           {
                 Width_Input = txtWidth.Text;
                 Length_Input = txtLength.Text;
                 Height_Input = txtHeight.Text;
@@ -70,26 +69,26 @@ namespace Room_dimensions
                 Room_Length = Convert.ToDecimal(Length_Input);
                 Room_Height = Convert.ToDecimal(Height_Input);
 
-                lstResults.Items.Clear();
+                lstResults.Items.Clear(); 
 
                 Calculations();
 
                 lstResults.Items.Add("Floor Area: " + decimal.Round(FloorArea, 2, MidpointRounding.AwayFromZero) + " Meters Squared");
                 lstResults.Items.Add("Paint Required: " + decimal.Round(Paint_Required, 2, MidpointRounding.AwayFromZero) + " Litres");
-                lstResults.Items.Add("Room Volume: " + decimal.Round(RoomVolume, 2, MidpointRounding.AwayFromZero) + " Meters Cubed");
+                lstResults.Items.Add("Room Volume: " + decimal.Round(RoomVolume, 2, MidpointRounding.AwayFromZero) + " Meters Cubed"); 
 
-            }
-            catch (Exception)  //Stops crashing if invalid characters are entered.
-            {
-                MessageBox.Show("Please enter a number into all fields");
-                Clear();
-            }
-
+           }
+           catch (Exception)  //Stops crashing if invalid characters are entered.
+           {
+               MessageBox.Show("Please enter a number into all fields");
+               Clear();
+           }             
+                           
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
-        }    
+        }
     }
 }
